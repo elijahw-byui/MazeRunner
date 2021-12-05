@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "D5oSvC0pEJ0R17TdPs7Z4CIxi0lWPiaHppmQm+Ql4Oe+K0oCNMsq/06dHMevtFudJEpiZ1TJOcmHClxKjh7+Ug==",
+  "success": true,
+  "projectFilePath": "/Users/elijah/Final/final-final/cse210-RH2-csharp.csproj",
+  "expectedPackageFiles": [
+    "/Users/elijah/.nuget/packages/raylib-cs/3.7.0.1/raylib-cs.3.7.0.1.nupkg.sha512",
+    "/Users/elijah/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
