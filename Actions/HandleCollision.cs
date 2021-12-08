@@ -42,18 +42,7 @@ namespace cse210_RH2_csharp.Scripting
                                         Point move = new Point(0,0);
                                         move = acting.GetVelocity();
                                         int dy = (move.GetY() * -1);
-                                       
                                         int dx = (move.GetX() * -1);
-                                        if (acting.isWallTall())
-                                        {
-                                            _audioService.PlaySound(Constants.SOUND_BOUNCE);
-                                            dx = (move.GetX() * -1);
-                                        }
-                                        if (acting.isWallWide())
-                                        {
-                                            dy = (move.GetY() * -1);
-                                            _audioService.PlaySound(Constants.SOUND_BOUNCE);
-                                        }
                                         Point where = new Point(0,0);
                                         where = acting.GetPosition();
                                         int y = where.GetY();
