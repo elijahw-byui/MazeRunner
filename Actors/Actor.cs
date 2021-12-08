@@ -15,6 +15,9 @@ namespace cse210_RH2_csharp.Casting
 
         protected string _text = "";
         private string _image = "";
+        
+        private bool _isWide = false;
+        private bool _isTall = false;
 
         public Actor()
         {
@@ -177,6 +180,22 @@ namespace cse210_RH2_csharp.Casting
         public virtual bool isBrick()
         {
             return false;
+        }
+        public bool isWallTall()
+        {
+            return _isWide;
+        }
+        public void SetWide(bool wide)
+        {
+            _isWide = wide;
+        }
+        public bool isWallWide()
+        {
+            return _isTall;
+        }
+        public void SetTall(bool tall)
+        {
+            _isTall = tall;
         }
         public virtual bool isRichguy()
         {

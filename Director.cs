@@ -56,6 +56,7 @@ namespace cse210_RH2_csharp
             foreach (Action action in actions)
             {
                 action.Execute(_cast);
+                _keepPlaying = action.CheckGameOver();                
             }
         }
 

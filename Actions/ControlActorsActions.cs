@@ -14,6 +14,10 @@ public class ControlActorsAction : Action
             _inputService = inputService;
             _physicsService = physicsService;
         }
+        public override bool CheckGameOver()
+        {
+            return false;
+        }
         public override void Execute(Dictionary<string, List<Actor>> cast)
         {
             Point p = _inputService.GetDirection();

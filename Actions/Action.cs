@@ -10,5 +10,12 @@ namespace cse210_RH2_csharp
     public abstract class Action
     {
         public abstract void Execute(Dictionary<string, List<Actor>> cast);
+
+        public virtual bool CheckGameOver()
+        {
+            return true;
+        }
+
+
     }
 }

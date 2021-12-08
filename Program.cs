@@ -28,6 +28,7 @@ namespace cse210_RH2_csharp
                     four.SetImage(Constants.IMAGE_WALLTALL);
                     four.SetWidth(Constants.WALLTALL_WIDTH);
                     four.SetHeight(Constants.WALLTALL_HEIGHT);
+                    four.SetTall(true);
                     cast["bricks"].Add(four);
                     upy += 100;
                 }
@@ -45,6 +46,7 @@ namespace cse210_RH2_csharp
                     four.SetImage(Constants.IMAGE_WALLWIDE);
                     four.SetWidth(Constants.WALLWIDE_WIDTH);
                     four.SetHeight(Constants.WALLWIDE_HEIGHT);
+                    four.SetWide(true);
                     cast["bricks"].Add(four);
                     upx += 100;
                 }

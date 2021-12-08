@@ -12,11 +12,13 @@ namespace cse210_RH2_csharp.Scripting
     {
         private PhysicsService _physicsService;
         private AudioService _audioService;
+        private bool _checkLoss = true;
         public HandleCollisionAction(PhysicsService physicsService, AudioService audioService)
         {
             _physicsService = physicsService;
             _audioService = audioService; 
         }
+        
         public override void Execute(Dictionary<string, List<Actor>> cast)
         {
             
@@ -40,7 +42,18 @@ namespace cse210_RH2_csharp.Scripting
                                         Point move = new Point(0,0);
                                         move = acting.GetVelocity();
                                         int dy = (move.GetY() * -1);
+                                       
                                         int dx = (move.GetX() * -1);
+                                        if (acting.isWallTall())
+                                        {
+                                            _audioService.PlaySound(Constants.SOUND_BOUNCE);
+                                            dx = (move.GetX() * -1);
+                                        }
+                                        if (acting.isWallWide())
+                                        {
+                                            dy = (move.GetY() * -1);
+                                            _audioService.PlaySound(Constants.SOUND_BOUNCE);
+                                        }
                                         Point where = new Point(0,0);
                                         where = acting.GetPosition();
                                         int y = where.GetY();
@@ -100,6 +113,7 @@ namespace cse210_RH2_csharp.Scripting
                                 {
                                     if (_physicsService.IsCollision(acting, reacting) && (acting.GetImage()!= "000000"))
                                     {
+                                        _checkLoss = false;
                                         _audioService.PlaySound(Constants.SOUND_BOUNCE);
                                     }
                                 }
@@ -110,6 +124,17 @@ namespace cse210_RH2_csharp.Scripting
                 }
             }
             
+        }
+        public override bool CheckGameOver()
+        {
+            if (_checkLoss == false)
+            {
+            return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }
