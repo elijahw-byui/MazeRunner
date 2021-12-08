@@ -37,10 +37,17 @@ namespace cse210_RH2_csharp.Scripting
                                     if (t)
                                     {
                                         _audioService.PlaySound(Constants.SOUND_BOUNCE);
-                                        //if (reacting.GetImage() = "./Assets/WallTall.png" ||)
-                                        //{
-                                            acting.SetVelocity(new Point(0,0));
-                                        //}
+                                        Point move = new Point(0,0);
+                                        move = acting.GetVelocity();
+                                        int dy = (move.GetY() * -1);
+                                        int dx = (move.GetX() * -1);
+                                        Point where = new Point(0,0);
+                                        where = acting.GetPosition();
+                                        int y = where.GetY();
+                                        int x = where.GetX();
+                                        int dyy = dy + y;
+                                        int dxx = dx + x; 
+                                        acting.SetPosition(new Point(dxx,dyy));
                                         
                                     }
                                 }
@@ -72,7 +79,7 @@ namespace cse210_RH2_csharp.Scripting
                         {
                             foreach (Actor reacting in regroup)
                             {
-                                if (reacting.isBrick())
+                                if (reacting.isBrick() || reacting.isRichguy())
                                 {
                                     if (_physicsService.IsCollision(acting,reacting))
                                     {
@@ -82,7 +89,7 @@ namespace cse210_RH2_csharp.Scripting
                                 else if (reacting.isArrow())
                                 {
 
-                                    if (_physicsService.IsCollision(acting, reacting) && (acting.GetImage()!= "000000"))
+                                    if (_physicsService.IsCollision(acting, reacting) && (reacting.GetImage()!= "000000"))
                                     {
                                         _audioService.PlaySound(Constants.SOUND_BOUNCE);
                                     
