@@ -36,7 +36,7 @@ namespace cse210_RH2_csharp.Scripting
                                     bool t = _physicsService.IsCollision(reacting, acting);
                                     if (t)
                                     {
-                                        _audioService.PlaySound(Constants.SOUND_BOUNCE);
+                                        //_audioService.PlaySound(Constants.SOUND_BOUNCE);
                                         Point move = new Point(0,0);
                                         move = acting.GetVelocity();
                                         int dy = (move.GetY() * -1);
@@ -79,7 +79,7 @@ namespace cse210_RH2_csharp.Scripting
                         {
                             foreach (Actor reacting in regroup)
                             {
-                                if (reacting.isBrick() || reacting.isRichguy())
+                                if (reacting.isBrick())
                                 {
                                     if (_physicsService.IsCollision(acting,reacting))
                                     {
