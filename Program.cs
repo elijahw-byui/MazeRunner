@@ -76,7 +76,7 @@ namespace cse210_RH2_csharp
             Robinhood one = new Robinhood();
             Point start = new Point(30,550);
             one.SetPosition(start);
-            one.SetImage(Constants.IMAGE_BALL);
+            one.SetImage(Constants.IMAGE_UR);
             one.SetWidth(Constants.BALL_WIDTH);
             one.SetHeight(Constants.BALL_HEIGHT);
             cast["Robinhood"].Add(one);

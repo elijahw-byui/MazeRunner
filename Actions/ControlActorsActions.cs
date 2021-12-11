@@ -42,12 +42,11 @@ public class ControlActorsAction : Action
                                             int x = (p.GetX() * -1);
                                             int y = (p.GetY() * -1);
                                             acting.MoveDirection(new Point(x,y));
-                                        
                                         }
                                     }
                                     else
                                     {
-                                        acting.MoveDirection(p);
+                                        acting.MoveDirection(p); 
                                     }
                                 }
                             }

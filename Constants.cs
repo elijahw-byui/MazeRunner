@@ -22,6 +22,8 @@ namespace cse210_RH2_csharp
         public const string IMAGE_WALLWIDE = "./Assets/WallWide.png";
         public const string IMAGE_RICHGUY = "./Assets/Richguy.png";
         public const string IMAGE_POORGUY = "./Assets/Poorman.png";
+        public const string IMAGE_UR = "./Assets/Up_Right.png";
+        public const string IMAGE_UL = "./Assets/Up_Left.png";
 
         public const string IMAGE_PADDLE = "./Assets/bat.png";
         public const string IMAGE_BALL = "./Assets/ball.png";

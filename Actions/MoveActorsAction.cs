@@ -20,36 +20,13 @@ namespace cse210_RH2_csharp.Scripting
             {
                 foreach (Actor acting in group)
                 {   
-                    //if (acting.isRobinhood())
-                    /*{
-                        foreach (List<Actor> regroup in cast.Values)
-                        {
-                            foreach (Actor reacting in regroup)
-                            {
-                                bool p = reacting.isBrick();
-                                if(p)
-                                {
-                                    bool t =_physicsService.IsCollision(acting,reacting);
-                                    if (t)
-                                    {
-                                       acting.HitsWall(); 
-                                    }
-                                    else
-                                    {
-                                        acting.MoveNext();
-                                    }
-                                }
-                                else
-                                {
-                                    acting.MoveNext();
-                                }
-                            }
-                        }
-                    }
-                    else*/
+                    
+                    acting.MoveNext();
+                    if (acting.isRobinhood())
                     {
-                        acting.MoveNext();
+                        
                     }
+                
                 }
             }
         }
