@@ -12,7 +12,7 @@ namespace cse210_RH2_csharp.Scripting
     {
         private PhysicsService _physicsService;
         private AudioService _audioService;
-        private bool _checkLoss = true;
+        private bool _checkLoss = false;
         public HandleCollisionAction(PhysicsService physicsService, AudioService audioService)
         {
             _physicsService = physicsService;
