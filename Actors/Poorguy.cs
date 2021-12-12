@@ -6,6 +6,9 @@ namespace cse210_RH2_csharp.Casting
     /// </summary>
     public class Poorguy : Actor
     {
-        
+        public override bool isPoorguy()
+        {
+            return true;
+        }
     }
 }

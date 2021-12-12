@@ -116,6 +116,7 @@ namespace cse210_RH2_csharp
             CreateTallWall(3, new Point(1104,622));
             CreateTallWall(3, new Point(1173,291));
             CreateTallWall(6, new Point(1173,456));
+            CreateTallWall(1, new Point(1173,7));
             CreateTallWall(2, new Point(1242,42));
             CreateTallWall(3, new Point(1242,250));
             CreateTallWall(5, new Point(1242,498));
@@ -201,7 +202,7 @@ namespace cse210_RH2_csharp
             {
                 Richguy dummy = new Richguy();
                 dummy.SetPosition(danger);
-                dummy.SetImage(Constants.IMAGE_RICHGUY);
+                dummy.SetImage(Constants.IMAGE_RICHGUY_UP);
                 dummy.SetHeight(Constants.RICHGUY_SIZE);
                 dummy.SetWidth(Constants.RICHGUY_SIZE);
                 cast["Richguys"].Add(dummy);
@@ -212,11 +213,22 @@ namespace cse210_RH2_csharp
             CreateRichGuys(new Point(500,430), new Point(0,3));
             CreateRichGuys(new Point(650,200), new Point(0,3));
             CreateRichGuys(new Point(230,135), new Point(3,0));
-            CreateRichGuys(new Point(500,14), new Point(7,0));
+            CreateRichGuys(new Point(500,14), new Point(5,0));
             CreateRichGuys(new Point(1390,836), new Point(0,3));
-            CreateRichGuys(new Point(650,200), new Point(0,3));
-            CreateRichGuys(new Point(230,135), new Point(3,0));
-            
+            CreateRichGuys(new Point(207,300), new Point(3,0));
+            CreateRichGuys(new Point(200,590), new Point(4,0));
+            CreateRichGuys(new Point(207,15), new Point(3,0));
+            CreateRichGuys(new Point(300,840), new Point(4,0));
+            CreateRichGuys(new Point(800,92), new Point(3,0));
+            CreateRichGuys(new Point(1035,134), new Point(4,0));
+            CreateRichGuys(new Point(1350,92), new Point(3,0));
+            CreateRichGuys(new Point(900,714), new Point(4,0));
+            CreateRichGuys(new Point(1200,797), new Point(3,0));
+            CreateRichGuys(new Point(1200,216), new Point(4,0));
+            CreateRichGuys(new Point(1320,300), new Point(0,3));
+            CreateRichGuys(new Point(910,400), new Point(0,3));
+            CreateRichGuys(new Point(700,700), new Point(0,3));
+            CreateRichGuys(new Point(155,830), new Point(0, 2));
 
 
             // TODO: Add your ball here

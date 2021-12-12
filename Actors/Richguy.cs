@@ -11,11 +11,5 @@ namespace cse210_RH2_csharp.Casting
         {
             return true;
         }
-        public override void switchImage()
-        {
-            bool set = !reset;
-            
-            reset = set; 
-        }
     }
 }

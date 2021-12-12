@@ -201,10 +201,11 @@ namespace cse210_RH2_csharp.Casting
         {
             return false;
         }
-        public virtual void switchImage()
+        public virtual bool isPoorguy()
         {
-            return;
+            return false;
         }
+
         public override string ToString()
         {
             return $"Position: ({_position.GetX()}, {_position.GetY()}), Velocity({_velocity.GetX()}, {_velocity.GetY()})";

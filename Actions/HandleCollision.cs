@@ -53,6 +53,10 @@ namespace cse210_RH2_csharp.Scripting
                                         
                                     }
                                 }
+                                else if (reacting.isPoorguy())
+                                {
+                                    //Raylib_cs.Raylib.CloseWindow();
+                                }
                             }
                         }
                     }
@@ -102,7 +106,7 @@ namespace cse210_RH2_csharp.Scripting
                                 {
                                     if (_physicsService.IsCollision(acting, reacting) && (acting.GetImage()!= "000000"))
                                     {
-                                        _checkLoss = false;
+                                        Raylib_cs.Raylib.CloseWindow();
                                         _audioService.PlaySound(Constants.SOUND_BOUNCE);
                                     }
                                 }
@@ -118,7 +122,7 @@ namespace cse210_RH2_csharp.Scripting
         {
             if (_checkLoss == false)
             {
-            return false;
+                return false;
             }
             else
             {

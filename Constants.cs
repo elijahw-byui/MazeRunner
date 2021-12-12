@@ -20,7 +20,10 @@ namespace cse210_RH2_csharp
         public const string IMAGE_LASER = "./Assets/laser.png";
         public const string IMAGE_WALLTALL = "./Assets/WallTall.png";
         public const string IMAGE_WALLWIDE = "./Assets/WallWide.png";
-        public const string IMAGE_RICHGUY = "./Assets/Richguy.png";
+        public const string IMAGE_RICHGUY_UP = "./Assets/Richguy_Up.png";
+        public const string IMAGE_RICHGUY_DOWN = "./Assets/Richguy_Down.png";
+        public const string IMAGE_RICHGUY_RIGHT = "./Assets/Richguy_Right.png";
+        public const string IMAGE_RICHGUY_LEFT = "./Assets/Richguy_Left.png";
         public const string IMAGE_POORGUY = "./Assets/Poorman.png";
         public const string IMAGE_UR = "./Assets/Up_Right.png";
         public const string IMAGE_UL = "./Assets/Up_Left.png";
