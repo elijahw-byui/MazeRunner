@@ -22,17 +22,96 @@ public class ControlActorsAction : Action
         {
             return false;
         }
+        public void WalkAnimation(Actor acting, int up, int right)
+        {
+            //if (acting.isRobinhood())
+                        {
+                            if (up == -1)
+                            {
+                                bool second = !first;
+                                if (counter%5 == 0)
+                                {
+                                if (second)
+                                {
+                                    acting.SetImage(Constants.IMAGE_UL);   
+                                }
+                                else if (!second)
+                                {
+                                    acting.SetImage(Constants.IMAGE_UR);
+                                }
+                                }
+                                counter++;                                
+                                first = second;
+                            }
+                            else if (up == 1)
+                            {
+                                bool second = !first;
+                                if (counter%5 == 0)
+                                {
+                                if (second)
+                                {
+                                    acting.SetImage(Constants.IMAGE_DL);   
+                                }
+                                else if (!second)
+                                {
+                                    acting.SetImage(Constants.IMAGE_DR);
+                                }
+                                }
+                                counter++;                                
+                                first = second;
+                            }
+                            else if (right == -1 && up == 0)
+                            {
+                                bool second = !first;
+                                if (counter%5 == 0)
+                                {
+                                if (second)
+                                {
+                                    acting.SetImage(Constants.IMAGE_LL);   
+                                }
+                                else if (!second)
+                                {
+                                    acting.SetImage(Constants.IMAGE_LR);
+                                }
+                                }
+                                counter++;                                
+                                first = second;
+                            }
+                            else if (right == 1 && up == 0)
+                            {
+                                bool second = !first;
+                                if (counter%5 == 0)
+                                {
+                                if (second)
+                                {
+                                    acting.SetImage(Constants.IMAGE_RL);   
+                                }
+                                else if (!second)
+                                {
+                                    acting.SetImage(Constants.IMAGE_RR);
+                                }
+                                }
+                                counter++;                                
+                                first = second;
+                            }
+                        }
+        }
         public override void Execute(Dictionary<string, List<Actor>> cast)
         {
             Point p = _inputService.GetDirection();
             int up = p.GetY();
+            int right = p.GetX();
             
             
             foreach (List<Actor> group in cast.Values)
             {
                 foreach (Actor acting in group)
                     {
-                        
+                        /*if (acting.isRobinhood())
+                        {
+                        WalkAnimation(acting,up,right);
+                        }
+*/
                         if (acting.isRobinhood())
                         {
                             if (up == -1)
@@ -47,6 +126,57 @@ public class ControlActorsAction : Action
                                 else if (!second)
                                 {
                                     acting.SetImage(Constants.IMAGE_UR);
+                                }
+                                }
+                                counter++;                                
+                                first = second;
+                            }
+                            if (up == 1)
+                            {
+                                bool second = !first;
+                                if (counter%5 == 0)
+                                {
+                                if (second)
+                                {
+                                    acting.SetImage(Constants.IMAGE_DL);   
+                                }
+                                else if (!second)
+                                {
+                                    acting.SetImage(Constants.IMAGE_DR);
+                                }
+                                }
+                                counter++;                                
+                                first = second;
+                            }
+                            if (right == -1)
+                            {
+                                bool second = !first;
+                                if (counter%5 == 0)
+                                {
+                                if (second)
+                                {
+                                    acting.SetImage(Constants.IMAGE_LL);   
+                                }
+                                else if (!second)
+                                {
+                                    acting.SetImage(Constants.IMAGE_LR);
+                                }
+                                }
+                                counter++;                                
+                                first = second;
+                            }
+                            if (right == 1)
+                            {
+                                bool second = !first;
+                                if (counter%5 == 0)
+                                {
+                                if (second)
+                                {
+                                    acting.SetImage(Constants.IMAGE_RL);   
+                                }
+                                else if (!second)
+                                {
+                                    acting.SetImage(Constants.IMAGE_RR);
                                 }
                                 }
                                 counter++;                                

@@ -158,8 +158,8 @@ namespace cse210_RH2_csharp.Casting
        
         public void MoveDirection(Point move)
         {
-            int x = (move.GetX() * 2);
-            int y = (move.GetY() * 2);
+            int x = (move.GetX() * 4);
+            int y = (move.GetY() * 4);
             _velocity = new Point(x,y);
         }
         public void HitsWall()

@@ -35,7 +35,7 @@ namespace cse210_RH2_csharp.Services
 
         public bool IsSpacePressed()
         {
-            return Raylib.IsKeyDown(Raylib_cs.KeyboardKey.KEY_SPACE);
+            return Raylib.IsKeyReleased(Raylib_cs.KeyboardKey.KEY_SPACE);
         }
 
         /// <summary>

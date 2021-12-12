@@ -20,6 +20,8 @@ public class ShootArrow : Action
             Arrow shot2 = new Arrow();
             Point loc = new Point(0,0);
             Point loc2 = new Point(0,0);
+            int stablex = 0;
+            int stabley = 0;
             foreach (List<Actor> group in cast.Values)
             {
                 
@@ -28,6 +30,26 @@ public class ShootArrow : Action
                             if (acting.isRobinhood())
                             {
                                 loc = acting.GetPosition();
+                                string facing = acting.GetImage();
+                                if (facing == Constants.IMAGE_DL || facing == Constants.IMAGE_DR)
+                                {
+                                    stabley = 10;
+                                }
+                                else if (facing == Constants.IMAGE_RL || facing == Constants.IMAGE_RR)
+                                {
+                                    stablex = 10;
+                                }
+                                else if (facing == Constants.IMAGE_UL || facing == Constants.IMAGE_UR)
+                                {
+                                    stabley = -10;
+                                }
+                                else if (facing == Constants.IMAGE_LL || facing == Constants.IMAGE_LR)
+                                {
+                                    stablex = -10;
+                                }
+
+
+
                             }
                             if (b && acting.isArrow())
                             {
@@ -42,7 +64,8 @@ public class ShootArrow : Action
                                 int y = speed.GetY() * 10;
                                 if (x == 0 && y == 0)
                                 {
-                                    y = -10;
+                                    x = stablex;
+                                    y = stabley;
                                 }
                                 Point speedNew = new Point(x,y);
                                 acting.SetVelocity(speedNew);

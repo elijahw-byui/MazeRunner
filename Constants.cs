@@ -7,8 +7,8 @@ namespace cse210_RH2_csharp
     /// </summary>
     public static class Constants
     {
-        public const int MAX_X = 800;
-        public const int MAX_Y = 600;
+        public const int MAX_X = 1440;
+        public const int MAX_Y = 872;
         public const int FRAME_RATE = 30;
 
         public const int DEFAULT_SQUARE_SIZE = 20;
@@ -24,6 +24,16 @@ namespace cse210_RH2_csharp
         public const string IMAGE_POORGUY = "./Assets/Poorman.png";
         public const string IMAGE_UR = "./Assets/Up_Right.png";
         public const string IMAGE_UL = "./Assets/Up_Left.png";
+        public const string IMAGE_DR = "./Assets/Down_Right.png";
+        public const string IMAGE_DL = "./Assets/Down_Left.png";
+        public const string IMAGE_RR = "./Assets/Right_Right.png";
+        public const string IMAGE_RL = "./Assets/Right_Left.png";
+        public const string IMAGE_LR = "./Assets/Left_Right.png";
+        public const string IMAGE_LL = "./Assets/Left_Left.png";
+        public const string IMAGE_DS = "./Assets/Down_Still.png";
+        public const string IMAGE_US = "./Assets/Up_Still.png";
+        public const string IMAGE_RS = "./Assets/Right_Still.png";
+        public const string IMAGE_LS = "./Assets/Left_Still.png";
 
         public const string IMAGE_PADDLE = "./Assets/bat.png";
         public const string IMAGE_BALL = "./Assets/ball.png";
