@@ -12,6 +12,7 @@ namespace cse210_RH2_csharp
         {
             // Create the cast
             Dictionary<string, List<Actor>> cast = new Dictionary<string, List<Actor>>();
+
             
             cast["bricks"] = new List<Actor>();
 
@@ -240,6 +241,7 @@ namespace cse210_RH2_csharp
             shot.SetHeight(6);
             shot.SetWidth(12);
             cast["arrows"].Add(shot);
+            
 
             /*Arrow shot2 = new Arrow();
             Point shotloc2 = new Point(100,100);
@@ -287,6 +289,8 @@ namespace cse210_RH2_csharp
             script["update"].Add(moveActorsAction);
             HandleCollisionAction handleCollisionAction = new HandleCollisionAction(physicsService, audioService);
             script["update"].Add(handleCollisionAction);
+            CollectCoins collectCoins = new CollectCoins(physicsService, outputService);
+            script["output"].Add(collectCoins);
             
             // TODO: Add additional actions here to handle the input, move the actors, handle collisions, etc.
 

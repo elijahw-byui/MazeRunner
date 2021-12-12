@@ -205,6 +205,10 @@ namespace cse210_RH2_csharp.Casting
         {
             return false;
         }
+        public virtual bool isCoin()
+        {
+            return false; 
+        }
 
         public override string ToString()
         {

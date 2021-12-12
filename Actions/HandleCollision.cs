@@ -12,7 +12,7 @@ namespace cse210_RH2_csharp.Scripting
     {
         private PhysicsService _physicsService;
         private AudioService _audioService;
-        private bool _checkLoss = false;
+        private bool _checkLoss = true;
         public HandleCollisionAction(PhysicsService physicsService, AudioService audioService)
         {
             _physicsService = physicsService;
@@ -52,10 +52,6 @@ namespace cse210_RH2_csharp.Scripting
                                         acting.SetPosition(new Point(dxx,dyy));
                                         
                                     }
-                                }
-                                else if (reacting.isPoorguy())
-                                {
-                                    //Raylib_cs.Raylib.CloseWindow();
                                 }
                             }
                         }
@@ -100,13 +96,16 @@ namespace cse210_RH2_csharp.Scripting
                                         _audioService.PlaySound(Constants.SOUND_BOUNCE);
                                     
                                         acting.SetImage("000000");
+                                        //acting.SetPosition(new Point(-99999,-99999));
+                                        //reacting.SetPosition(new Point(99999,99999));
                                     }
                                 }
                                 else if (reacting.isRobinhood())
                                 {
                                     if (_physicsService.IsCollision(acting, reacting) && (acting.GetImage()!= "000000"))
                                     {
-                                        Raylib_cs.Raylib.CloseWindow();
+                                        //Raylib_cs.Raylib.CloseWindow();
+                                        _checkLoss = false;
                                         _audioService.PlaySound(Constants.SOUND_BOUNCE);
                                     }
                                 }
@@ -120,14 +119,7 @@ namespace cse210_RH2_csharp.Scripting
         }
         public override bool CheckGameOver()
         {
-            if (_checkLoss == false)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return _checkLoss;
         }
     }
 }
