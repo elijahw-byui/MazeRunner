@@ -162,10 +162,21 @@ namespace cse210_RH2_csharp.Casting
             int y = (move.GetY() * 4);
             _velocity = new Point(x,y);
         }
-        public void HitsWall()
+        public void HitsWall(Actor acting)
         {
+            Random rnd = new Random();
+            int choice = rnd.Next(1,2);
             int dx = (_velocity.GetX() * -1);
             int dy = (_velocity.GetY() * -1);
+        
+            if (acting.isWallTall())
+            {
+                dy = (_velocity.GetY() * -1);
+            }
+            else if (acting.isWallWide())
+            {
+                dx = (_velocity.GetX() * -1); 
+            }
             _velocity = new Point(dx, dy);
         }
 
@@ -183,15 +194,15 @@ namespace cse210_RH2_csharp.Casting
         }
         public bool isWallTall()
         {
-            return _isWide;
+            return _isTall;
         }
         public void SetWide(bool wide)
         {
             _isWide = wide;
         }
-        public bool isWallWide()
+        public virtual bool isWallWide()
         {
-            return _isTall;
+            return _isWide;
         }
         public void SetTall(bool tall)
         {

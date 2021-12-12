@@ -30,7 +30,7 @@ namespace cse210_RH2_csharp
                     four.SetHeight(Constants.WALLTALL_HEIGHT);
                     four.SetTall(true);
                     cast["bricks"].Add(four);
-                    upy += 100;
+                    upy += 50;
                 }
             }
             void CreateWideWall(int howMany, Point start)
@@ -48,26 +48,26 @@ namespace cse210_RH2_csharp
                     four.SetHeight(Constants.WALLWIDE_HEIGHT);
                     four.SetWide(true);
                     cast["bricks"].Add(four);
-                    upx += 100;
+                    upx += 50;
                 }
             }
             // Builds the frame of the game.
-            CreateTallWall(9, new Point(0,0));
-            CreateWideWall(15, new Point(0,0));
-            CreateTallWall(9, new Point(1430,0));
-            CreateWideWall(15, new Point(0,862));
+            CreateTallWall(18, new Point(0,0));
+            CreateWideWall(30, new Point(0,0));
+            CreateTallWall(18, new Point(1430,0));
+            CreateWideWall(30, new Point(200,862));
             // Builds the vertical walls of the maze in the game.
-            CreateTallWall(2, new Point(200,390));
-            CreateTallWall(5, new Point(400,50));
-            CreateTallWall(2, new Point(600,390));
-            CreateTallWall(2, new Point(700,330));
-            CreateTallWall(2, new Point(100,0));
+            CreateTallWall(4, new Point(200,390));
+            CreateTallWall(10, new Point(400,50));
+            CreateTallWall(4, new Point(600,390));
+            CreateTallWall(4, new Point(700,330));
+            CreateTallWall(4, new Point(100,0));
             // Builds the horizontal wall of the maze in the game. 
-            CreateWideWall(1, new Point(200,390));
-            CreateWideWall(7, new Point(0,330));
-            CreateWideWall(2, new Point(100,200));
-            CreateWideWall(5, new Point(200, 50));
-            CreateWideWall(3, new Point(490,180));
+            CreateWideWall(2, new Point(200,390));
+            CreateWideWall(14, new Point(0,330));
+            CreateWideWall(4, new Point(100,200));
+            CreateWideWall(10, new Point(200, 50));
+            CreateWideWall(6, new Point(490,180));
             
             
 

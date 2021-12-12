@@ -85,7 +85,7 @@ namespace cse210_RH2_csharp.Scripting
                                 {
                                     if (_physicsService.IsCollision(acting,reacting))
                                     {
-                                        acting.HitsWall();
+                                        acting.HitsWall(reacting);
                                     }
                                 }
                                 else if (reacting.isArrow())
