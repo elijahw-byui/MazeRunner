@@ -124,7 +124,7 @@ namespace cse210_RH2_csharp
             CreateTallWall(5, new Point(1311,498));
             CreateTallWall(2, new Point(1380,125));
             CreateTallWall(1, new Point(1380,250)); 
-            CreateTallWall(2, new Point(1380,332));
+            CreateTallWall(3, new Point(1380,332));
             CreateTallWall(8, new Point(1380,498));
 
             // Builds the horizontal wall of the maze in the game. 
@@ -208,10 +208,14 @@ namespace cse210_RH2_csharp
                 dummy.SetVelocity(velocity);
 
             }
-            CreateRichGuys(new Point(300,500), new Point(3,0));
-            CreateRichGuys(new Point(500,430), new Point(2,2));
-            CreateRichGuys(new Point(650,200), new Point(1,2));
-            CreateRichGuys(new Point(200,150), new Point(2,1));
+            CreateRichGuys(new Point(300,500), new Point(0,3));
+            CreateRichGuys(new Point(500,430), new Point(0,3));
+            CreateRichGuys(new Point(650,200), new Point(0,3));
+            CreateRichGuys(new Point(230,135), new Point(3,0));
+            CreateRichGuys(new Point(500,14), new Point(7,0));
+            CreateRichGuys(new Point(1390,836), new Point(0,3));
+            CreateRichGuys(new Point(650,200), new Point(0,3));
+            CreateRichGuys(new Point(230,135), new Point(3,0));
             
 
 

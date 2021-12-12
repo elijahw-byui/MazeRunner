@@ -107,11 +107,7 @@ public class ControlActorsAction : Action
             {
                 foreach (Actor acting in group)
                     {
-                        /*if (acting.isRobinhood())
-                        {
-                        WalkAnimation(acting,up,right);
-                        }
-*/
+                       
                         if (acting.isRobinhood())
                         {
                             if (up == -1)
