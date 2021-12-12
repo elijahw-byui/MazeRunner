@@ -55,7 +55,7 @@ namespace cse210_RH2_csharp
             CreateTallWall(18, new Point(0,0));
             CreateWideWall(30, new Point(0,0));
             CreateTallWall(18, new Point(1430,0));
-            CreateWideWall(30, new Point(200,862));
+            CreateWideWall(30, new Point(0,862));
             // Builds the vertical walls of the maze in the game.
             CreateTallWall(4, new Point(200,390));
             CreateTallWall(10, new Point(400,50));
