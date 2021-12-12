@@ -55,10 +55,10 @@ namespace cse210_RH2_csharp
         public const int BRICK_HEIGHT = 24;
         public const int LASER_HEIGHT = 6;
         public const int LASER_WIDTH = 12;
-        public const int WALLTALL_HEIGHT = 50;
-        public const int WALLTALL_WIDTH = 10;
-        public const int WALLWIDE_HEIGHT = 10;
-        public const int WALLWIDE_WIDTH = 50;
+        public const int WALLTALL_HEIGHT = 43;
+        public const int WALLTALL_WIDTH = 9;
+        public const int WALLWIDE_HEIGHT = 7;
+        public const int WALLWIDE_WIDTH = 69;
         public const int RICHGUY_SIZE = 25;
         public const int POORGUY_SIZE = 20;
 
